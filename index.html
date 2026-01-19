@@ -3,22 +3,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerald & Gold Islamic Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wedding Invitation | Fariha & Abdullah</title>
+    <meta name="description" content="You are cordially invited to the wedding ceremony of Fariha Ahmed and Abdullah Masud Babor.">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wedding Invitation | Fariha & Abdullah">
+    <meta property="og:description" content="Save the date: 26 January 2026 at Kushiyara International Convention Hall.">
+    <meta property="og:image" content="https://fonts.gstatic.com/s/i/materialicons/favorite/v12/24px.svg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --emerald: #022c22;
+        --gold: #d4af37;
+        --gold-light: #fef08a;
+      }
+      
       body {
         margin: 0;
         padding: 0;
-        background-color: #022c22;
-        color: #fef08a;
+        background-color: var(--emerald);
+        color: var(--gold-light);
         font-family: 'Playfair Display', serif;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow-x: hidden;
       }
+
       .font-cinzel { font-family: 'Cinzel', serif; }
       .font-amiri { 
         font-family: 'Amiri', serif;
@@ -27,90 +43,109 @@
       .font-bangla {
         font-family: 'Noto Serif Bengali', serif;
       }
-      .font-bangla-sans {
-        font-family: 'Hind Siliguri', sans-serif;
-      }
       
-      /* Refined Premium Metallic Gold Text Effect */
+      /* Luxury Gold Shimmer Animation */
       .gold-text {
         display: inline-block;
         background: linear-gradient(
           110deg,
           #8a6d3b 0%,
-          #8a6d3b 15%,
           #d4af37 30%,
           #fef08a 45%,
           #ffffff 50%,
           #fef08a 55%,
           #d4af37 70%,
-          #8a6d3b 85%,
           #8a6d3b 100%
         );
-        background-size: 250% auto;
+        background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
-        animation: luxury-glint 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+        animation: luxury-glint 5s linear infinite;
         font-weight: bold;
       }
       
       @keyframes luxury-glint {
-        0% { background-position: -125% center; }
-        100% { background-position: 125% center; }
+        to { background-position: 200% center; }
       }
 
-      /* Golden Border Gradient */
-      .gold-border {
-        border-image: linear-gradient(to bottom right, #fef08a, #d4af37, #a16207) 1;
-      }
-
-      /* Subtle shadow for depth */
       .premium-shadow {
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
       }
+
+      .fade-in {
+        animation: fadeIn 1.2s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Hide Scrollbars */
+      ::-webkit-scrollbar { width: 0px; background: transparent; }
 
       @media print {
-        @page {
-          margin: 0;
-          size: auto;
+        @page { 
+          margin: 0; 
+          size: auto; 
         }
-        .no-print { display: none !important; }
+        .no-print { 
+          display: none !important; 
+        }
         body { 
           background-color: #022c22 !important; 
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-        #root {
-          padding: 0 !important;
-          margin: 0 !important;
-          width: 100%;
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          min-height: 100vh !important;
-        }
-        .premium-shadow {
-          box-shadow: none !important;
-        }
-        /* Ensure gradients and colors show up in PDF/Print */
-        * {
           -webkit-print-color-adjust: exact !important;
           print-color-adjust: exact !important;
         }
-        /* Override any transparency that might fail in some PDF engines */
-        .opacity-15 { opacity: 0.25 !important; }
+        #root { 
+          display: block !important;
+          width: 100% !important;
+          height: 100vh !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .fade-in {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        .premium-shadow { 
+          box-shadow: none !important; 
+        }
+        main {
+          padding: 0 !important;
+          margin: 0 !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+          height: 100vh !important;
+        }
+        .invitation-card-root {
+          max-width: none !important;
+          width: 100% !important;
+          height: 100vh !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
+        /* Ensure all colors and gradients are preserved in PDF */
+        * { 
+          -webkit-print-color-adjust: exact !important; 
+          print-color-adjust: exact !important; 
+        }
       }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/"
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="root"></div>
