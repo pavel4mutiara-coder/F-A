@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { INVITATION_DATA, BISMILLAH_TEXT } from '../constants';
-import { CornerOrnament, GeometricPattern, DecorativeDivider, GeometricBorder, CalligraphyFrame } from './Ornaments';
+import { INVITATION_DATA, BISMILLAH_TEXT } from '../constants.tsx';
+import { CornerOrnament, GeometricPattern, DecorativeDivider, GeometricBorder, CalligraphyFrame } from './Ornaments.tsx';
 
 interface InvitationCardProps {
   language: 'bn' | 'en';

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import InvitationCard from './components/InvitationCard';
-import { INVITATION_DATA } from './constants';
+import InvitationCard from './components/InvitationCard.tsx';
+import { INVITATION_DATA } from './constants.tsx';
 
 const App: React.FC = () => {
   const [copied, setCopied] = useState(false);
