@@ -53,10 +53,6 @@ Requesting the honor of your presence.` :
       
       {/* Dynamic Header */}
       <div className="no-print w-full max-w-lg mb-8 text-center space-y-6">
-        <div className="inline-block px-4 py-1 border border-[#d4af37]/30 rounded-full text-[10px] sm:text-xs uppercase tracking-[0.4em] text-[#d4af37]/80 animate-pulse">
-          Official Digital Invite
-        </div>
-        
         <h1 className={`font-cinzel text-lg sm:text-2xl gold-text font-bold tracking-[0.1em] transition-all duration-700 ${language === 'bn' ? 'font-bangla' : ''}`}>
           {language === 'bn' ? 'ফারিহা ও আব্দুল্লাহ' : 'Fariha & Abdullah'}
         </h1>
